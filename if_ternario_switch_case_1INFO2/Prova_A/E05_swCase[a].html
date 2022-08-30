@@ -1,0 +1,31 @@
+<script>
+    //SWITCH CASE SWITCH CASE SWITCH CASE
+
+    //PROBLEMA: Aplicar desconto no preço da venda
+    //Peça para o vendedor informar o valor total da venda e também informar o Tipo do Cliente, considerando o seguinte cenário:
+    //Cliente Comum (Use código 1) tem 1% (1/100) de desconto.
+    //Cliente VIP (Use código 2) tem 5% (5/100) de desconto.
+    //Funcionário (Use código 3) tem 10% (10/100) de desconto.
+
+    //Calcule e apresente o preço final da venda de acordo com o Tipo do Cliente
+
+    //ENTRADA
+    const valorvenda = Number(prompt("Informe o preço da venda"))
+    const tipocliente = prompt("Informe o tipo de cliente(Comum-C/Vip-V/Funcionário-F):").toUpperCase()
+    let precofinal
+    //PROCESSAMENTO
+    switch (tipocliente) {
+        case "C":
+            precofinal = valorvenda - valorvenda * 0.01
+            break;
+        case "V":
+            precofinal = valorvenda - valorvenda * 0.05
+            break;
+        case "F":
+            precofinal = valorvenda - valorvenda * 0.10
+        break;
+    }
+
+    //SAÍDA
+    document.write(`Por seu cliente ser do tipo ${tipocliente}, o preço final será de R$${precofinal}`)
+</script>
